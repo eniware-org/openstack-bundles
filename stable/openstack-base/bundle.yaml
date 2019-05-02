@@ -106,7 +106,7 @@ services:
     charm: cs:ceph-osd-269
     num_units: 3
     options:
-      osd-devices: /dev/sdb
+      osd-devices: /ceph
       source: cloud:bionic-rocky
     to:
     - '1'
@@ -195,7 +195,7 @@ services:
     num_units: 1
     options:
       bridge-mappings: physnet1:br-ex
-      data-port: br-ex:enp2s0
+      data-port: br-ex:enp1s0f1
       openstack-origin: cloud:bionic-rocky
       worker-multiplier: 0.25
     to:
